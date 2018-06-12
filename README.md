@@ -1,6 +1,6 @@
 # Ближайшие бары
 
-[FIXME. Здесь будет описание проекта]
+This program define the smallest, biggest and closest bar using json file with bars data collection.
 
 # Как запустить
 
@@ -10,8 +10,15 @@
 
 ```#!bash
 
-$ python bars.py # possibly requires call of python3 executive instead of just python
-# FIXME вывести пример ответа скрипта
+$ python bars.py
+```
+then enter your geo-position (longitude and latitude, e.c. 38.5 and 55.1)
+
+bars.py returns:
+```
+The biggest bar - Спорт бар «Красная машина»
+The smallest one - БАР. СОКИ
+The closest one - Таверна
 
 ```
 
@@ -20,3 +27,5 @@ $ python bars.py # possibly requires call of python3 executive instead of just p
 # Цели проекта
 
 Код создан в учебных целях. В рамках учебного курса по веб-разработке - [DEVMAN.org](https://devman.org)
+
+Main goal is to study lambda functions and json handling 
