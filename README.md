@@ -15,9 +15,9 @@ then enter your geo-position (longitude and latitude, e.c. 38.5 and 55.1)
 
 bars.py returns:
 ```
-The biggest bar - Спорт бар «Красная машина»
-The smallest one - БАР. СОКИ
-The closest one - Таверна
+The biggest bar - Sportbar Red Mashine
+The smallest one - Bar Spring
+The closest one - Taverna
 
 ```
 
