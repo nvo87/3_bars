@@ -1,19 +1,13 @@
+import os
 import json
 
 
-def load_data(filepath):
-    try:
+def read_json_from_file(filepath):
+    if os.path.isfile(filepath):
         with open(filepath, encoding='utf-8') as file_object:
             return json.load(file_object)
-    except FileNotFoundError:
-        print('File bars.json not found or it has wrong name')
-        exit()
-    except json.decoder.JSONDecodeError:
-        print('File has invalid json structure')
-        exit()
-    except Exception as err:
-        print('Error is:', str(err))
-        exit()
+    else:
+        raise FileNotFoundError
 
 
 def get_biggest_bar(bars_list) -> dict:
@@ -52,7 +46,14 @@ def print_bar_name(bar_dict, message=''):
 
 if __name__ == '__main__':
     bars_filepath = 'bars.json'
-    bars = load_data(bars_filepath)['features']
+    try:
+        bars = read_json_from_file(bars_filepath)['features']
+    except json.decoder.JSONDecodeError:
+        print('File has invalid json structure')
+        exit()
+    except FileNotFoundError:
+        print('File not found or its name is wrong')
+        exit()
 
     longitude = input_coordinate('Input your longitude:')
     latitude = input_coordinate('Input your latitude:')
