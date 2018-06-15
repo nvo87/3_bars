@@ -164,4 +164,18 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+
+# Created by https://www.gitignore.io/api/visualstudiocode
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
+
+
+# End of https://www.gitignore.io/api/visualstudiocode
+
 # End of https://www.gitignore.io/api/django,python,windows,sublimetext

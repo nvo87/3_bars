@@ -7,7 +7,7 @@ This program define the smallest, biggest and closest bar using json file with b
 Script requires you Python 3.5
 Start on Linux
 
-```#!bash
+```bash
 
 $ python bars.py
 ```
