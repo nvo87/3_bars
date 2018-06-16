@@ -1,5 +1,5 @@
+import argparse
 from data_loaders import load_from_json
-from argparser import MyParser
 
 
 def get_biggest_bar(bars_list) -> dict:
@@ -38,12 +38,10 @@ def print_bar_name(bar_dict, message=''):
 
 
 def parse_filepath_from_args():
-    parser = MyParser(description='Script gets you the smallest, '
-                                  'biggest and closest bar')
-    parser.add_argument('file_path',
-                        help='path to json file with bars data. '
-                             'You may download it here: '
-                             'https://devman.org/fshare/1503831681/4/')
+    parser = argparse.ArgumentParser(description='Script gets you the '
+                                    'smallest,biggest and closest bar')
+    parser.add_argument('file_path', help='path to json file with bars data. '
+        'You may download it here: https://devman.org/fshare/1503831681/4/')
     args = parser.parse_args()
     return args.file_path
 
